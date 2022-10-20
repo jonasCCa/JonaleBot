@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href="https://fonts.googleapis.com/css2?family=Avenir&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
 		<style>
 		body {
@@ -22,7 +22,7 @@
 			background-color: rgb(0, 0, 0)!important;
 			padding: .75rem!important;
 			font-size: 1.125rem!important;
-			font-family: "Avenir";
+			font-family: "Montserrat";
 			line-height: 1.75rem!important;
 		}
 		.command-title {
@@ -83,35 +83,85 @@
 			line-height: 1.25rem!important;
 			opacity: .75!important;
 		}
+		@media screen and (min-width: 1024px) {
+			.flex-row-col {
+				flex-direction: row!important;
+				flex-grow: inherit;
+				justify-content: center;
+				display: flex;
+			}
+		}
+		@media not screen and (min-width: 1024px) {
+			.flex-row-col {
+				flex-direction: column!important;
+				flex-grow: inherit;
+				justify-content: center;
+			}
+		}
+		.flex-col {
+			flex-direction: column!important;
+			flex-grow: inherit;
+		}
 		</style>
 	</head>
 	
 	<body>
-		<div style="display: flex; flex-direction:column">
-			<div class="command-block"><!---->
-				<p class="command-title">
-					!comandos
-			 	</p>
-				<div class="command-details">
-					<p class="command-description">
-						Link para este site.
-			    	</p>
-					<p class="command-alias">
-						Alternativas: !cmd
-			    	</p> <!---->
-				</div>
-			</div>
-			<div class="command-block" style="font-family: Roboto Mono"><!---->
-				<p class="command-title">
-					!comandos
-			 	</p>
-				<div class="command-details">
-					<p class="command-description">
-						Link para este site.
-			    	</p>
-					<p class="command-alias">
-						Alternativas: !cmd
-			    	</p> <!---->
+		<div style="display: flex; flex-direction:column"> <!--Corpo Principal-->
+			<div style="flex-grow:1; padding-left: 5em; padding-right: 5em"> <!--Conteúdo-->
+				<div class="flex-row-col"> <!--Linha ou Coluna (Dependendo da Janela)-->
+					<div class="flex-row-col" style="flex-grow: initial"> <!--Lista de Sessões-->
+						
+					</div>
+					<div class="flex-col"> <!--Lista Comandos-->
+						<!---->
+						<div class="command-block">
+							<p class="command-title">
+								!comandos
+						 	</p>
+							<div class="command-details">
+								<p class="command-description">
+									Link desta página é enviado no chat.
+						    	</p>
+								<p class="command-alias">
+									Alternativas: !cmd
+						    	</p>
+							</div>
+						</div>
+						<!---->
+						<div class="command-block">
+							<p class="command-title">
+								!lurk
+						 	</p>
+							<div class="command-details">
+								<p class="command-description">
+									Use esse comando se quiser que todos saibam que você está apoiando em silêncio.
+						    	</p>
+							</div>
+						</div>
+						<!---->
+						<div class="command-block">
+							<p class="command-title">
+								!followage
+						 	</p>
+							<div class="command-details">
+								<p class="command-description">
+									O tempo que o você segue é enviado no chat.
+						    	</p>
+							</div>
+						</div>
+						<!---->
+						<div class="command-block">
+							<p class="command-title">
+								!journey
+						 	</p>
+							<div class="command-details">
+								<p class="command-description">
+									Link da planilha do Hyrule Journey é enviado no chat.
+						    	</p>
+							</div>
+						</div>
+						<!---->
+					</div>
 				</div>
 			</div>
 		</div>
