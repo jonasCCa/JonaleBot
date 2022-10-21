@@ -37,10 +37,43 @@
 			font-family: "Montserrat";
 			line-height: 1.75rem!important;
 		}
-		.block.section {
-			border-color: rgb(56, 48, 92)!important;
-			background-color: rgb(56, 48, 92)!important;
+
+		.block.section-list {
+			padding: 0!important;
+			overflow-x: auto;
+			white-space:nowrap;
+			-webkit-overflow-scrolling: touch;
+			display: flex!important;
 		}
+		.block.section-list > * {
+			flex-grow: 1;
+			flex-shrink: 0;
+		}
+		.section-button {
+		    tab-size: 4;
+			-webkit-text-size-adjust: 100%;
+			font-family: inherit;
+			text-align: center;
+			box-sizing: border-box;
+			margin-right: .5rem!important;
+			margin-top: .5rem!important;
+			margin-bottom: .5rem!important;
+			display: flex!important;
+			flex-direction: column!important;
+			border-radius: .375rem!important;
+			background-color: rgb(81, 97, 104)!important;
+			padding: .5rem!important;
+		}
+
+		.block.section.a {
+			border-color: rgb(33, 2, 112)!important;
+			background-color: rgba(21, 13, 143, 0.452)!important;
+		}
+		.block.section.b {
+			border-color: rgb(33, 2, 112)!important;
+			background-color: rgba(93, 41, 214, 0.301)!important;
+		}
+
 		.title-container {
 		    flex-direction:row!important;
 			display: flex;
@@ -115,12 +148,36 @@
 				justify-content: center;
 				display: flex;
 			}
+
+			.flex-col-row {
+				flex-direction: column!important;
+				flex-grow: inherit;
+				justify-content: center;
+				display: flex;
+				height: fit-content;
+				margin-right: 2rem;
+			}
+
+			.section-button {
+				margin-left: .5em;
+			}
 		}
 		@media not screen and (min-width: 1024px) {
 			.flex-row-col {
 				flex-direction: column!important;
 				flex-grow: inherit;
 				justify-content: center;
+			}
+
+			.flex-col-row {
+				flex-direction: row!important;
+				flex-grow: inherit;
+				justify-content: center;
+				display: flex;
+			}
+
+			.fB {
+				margin-left: .5em!important
 			}
 		}
 		.flex-col {
@@ -137,72 +194,85 @@
 		<div style="display: flex;"> <!--Corpo Principal-->
 			<div class="content"> <!--Conteúdo-->
 				<div class="flex-row-col"> <!--Linha ou Coluna (Dependendo da Janela)-->
-					<div class="flex-row-col" style="flex-grow: initial"> <!--Lista de Sessões-->
-						
+					<div class="flex-col-row block section-list" style="flex-grow: 1"> <!--Lista de Sessões-->
+						<a class="section-button hidden-link fB" href="#Basic_Commands">
+							Básicos
+						</a>
+						<a class="section-button hidden-link" href="#Special_Commands">
+							Especiais
+						</a>
+						<a class="section-button hidden-link" href="#Media_Commands">
+							Redes
+						</a>
+						<a class="section-button hidden-link" href="#List_Commands">
+							Listas
+						</a>
+						<a class="section-button hidden-link" href="#Counter_Commands">
+							Contadores
+						</a>
 					</div>
 					<div class="flex-col"> <!--Lista Comandos-->
 						<!---->
-						<div id="Baisc_Commands" class="block section">
+						<div id="Basic_Commands" class="block section a">
 							<p class="command-title">
 								Básicos
 							</p>
-						</div>
-						<!---->
-						<div class="block">
-							<p class="command-title">
-								!comandos
-							</p>
-							<div class="command-details">
-								<p class="command-description">
-									Link desta página no chat.
+							<!---->
+							<div class="block">
+								<p class="command-title">
+									!comandos
 								</p>
-								<p class="command-alias">
-									Alternativas: !cmd
+								<div class="command-details">
+									<p class="command-description">
+										Link desta página no chat.
+									</p>
+									<p class="command-alias">
+										Alternativas: !cmd
+									</p>
+								</div>
+							</div>
+							<!---->
+							<div class="block">
+								<p class="command-title">
+									!lurk
 								</p>
+								<div class="command-details">
+									<p class="command-description">
+										Use esse comando se quiser que todos saibam que você está apoiando em silêncio.
+									</p>
+								</div>
+							</div>
+							<!---->
+							<div class="block">
+								<p class="command-title">
+									!followage
+								</p>
+								<div class="command-details">
+									<p class="command-description">
+										O tempo que o você segue é enviado no chat.
+									</p>
+								</div>
+							</div>
+							<!---->
+							<div class="block">
+								<p class="command-title">
+									!jogo
+								</p>
+								<div class="command-details">
+									<p class="command-description">
+										Nome do jogo da Stream é enviado no chat.
+									</p>
+									<p class="command-alias">
+										Alternativas: !game
+									</p>
+								</div>
 							</div>
 						</div>
 						<!---->
-						<div class="block">
-							<p class="command-title">
-								!lurk
-							</p>
-							<div class="command-details">
-								<p class="command-description">
-									Use esse comando se quiser que todos saibam que você está apoiando em silêncio.
-								</p>
-							</div>
-						</div>
-						<!---->
-						<div class="block">
-							<p class="command-title">
-								!followage
-							</p>
-							<div class="command-details">
-								<p class="command-description">
-									O tempo que o você segue é enviado no chat.
-								</p>
-							</div>
-						</div>
-						<!---->
-						<div class="block">
-							<p class="command-title">
-								!jogo
-							</p>
-							<div class="command-details">
-								<p class="command-description">
-									Nome do jogo da Stream é enviado no chat.
-								</p>
-								<p class="command-alias">
-									Alternativas: !game
-								</p>
-							</div>
-						</div>
-						<!---->
-						<div id="Special_Commands" class="block section">
+						<div id="Special_Commands" class="block section b">
 							<p class="command-title">
 								Especiais
 							</p>
-							
 							<!---->
 							<div class="block">
 								<p class="command-title">
@@ -244,11 +314,10 @@
 							</div>
 						</div>
 						<!---->
-						<div id="Media_Commands" class="block section">
+						<div id="Media_Commands" class="block section a">
 							<p class="command-title">
 								Redes
 							</p>
-						
 							<!---->
 							<div class="block">
 								<p class="command-title">
@@ -304,104 +373,104 @@
 							</div>
 							<!---->
 						</div>
-						<div id="List_Commands" class="block section">
+						<div id="List_Commands" class="block section b">
 							<p class="command-title">
 								Listas
 							</p>
-						</div>
-						<!---->
-						<div class="block">
-							<p class="command-title">
-								!&lt;nome da lista&gt;
-							</p>
-							<div class="command-details">
-								<p class="command-description">
-									Uma entrada aleatóia da lista é enviada no chat.
+							<!---->
+							<div class="block">
+								<p class="command-title">
+									!&lt;nome da lista&gt;
 								</p>
+								<div class="command-details">
+									<p class="command-description">
+										Uma entrada aleatóia da lista é enviada no chat.
+									</p>
+								</div>
+							</div>
+							<!---->
+							<div class="block">
+								<div class="title-container">
+									<div class="command-title">!lista &lt;nome&gt;</div>
+									<div class="command-mod">Moderadores</div>
+								</div>
+								<div class="command-details">
+									<p class="command-description">
+										Cria uma nova lista.
+									</p>
+									<p class="command-alias">
+										Obs.: Evitar usar o mesmo nome de um contador.
+									</p>
+								</div>
+							</div>
+							<!---->
+							<div class="block">
+								<div class="title-container">
+									<div class="command-title">!&lt;nome da lista&gt; add &lt;entrada&gt;</div>
+									<div class="command-mod">Moderadores</div>
+								</div>
+								<div class="command-details">
+									<p class="command-description">
+										Adiciona uma nova entrada na lista.
+									</p>
+									<p class="command-alias">
+										Ex.: !frases add Uma frase nova todo dia.
+									</p>
+								</div>
 							</div>
 						</div>
 						<!---->
-						<div class="block">
-							<div class="title-container">
-								<div class="command-title">!lista &lt;nome&gt;</div>
-								<div class="command-mod">Moderadores</div>
-							</div>
-							<div class="command-details">
-								<p class="command-description">
-									Cria uma nova lista.
-								</p>
-								<p class="command-alias">
-									Obs.: Evitar usar o mesmo nome de um contador.
-								</p>
-							</div>
-						</div>
-						<!---->
-						<div class="block">
-							<div class="title-container">
-								<div class="command-title">!&lt;nome da lista&gt; add &lt;entrada&gt;</div>
-								<div class="command-mod">Moderadores</div>
-							</div>
-							<div class="command-details">
-								<p class="command-description">
-									Adiciona uma nova entrada na lista.
-								</p>
-								<p class="command-alias">
-									Ex.: !frases add Uma frase nova todo dia.
-								</p>
-							</div>
-						</div>
-						<!---->
-						<div id="Counter_Commands" class="block section">
+						<div id="Counter_Commands" class="block section a">
 							<p class="command-title">
 								Contadores
 							</p>
-						</div>
-						<!---->
-						<div class="block">
-							<p class="command-title">
-								!&lt;nome do contador&gt; &lt;num&gt;
-							</p>
-							<div class="command-details">
-								<p class="command-description">
-									Adiciona &lt;num&gt; ao contador e mensagem atualizada é enviada no chat.
+							<!---->
+							<div class="block">
+								<p class="command-title">
+									!&lt;nome do contador&gt; &lt;num&gt;
 								</p>
-								<p class="command-alias">
-									Ex.: !teste +1
-								</p>
-								<p class="command-alias">
-									Obs.: Adicionar 0 também envia mensagem.
-								</p>
+								<div class="command-details">
+									<p class="command-description">
+										Adiciona &lt;num&gt; ao contador e mensagem atualizada é enviada no chat.
+									</p>
+									<p class="command-alias">
+										Ex.: !teste +1
+									</p>
+									<p class="command-alias">
+										Obs.: Adicionar 0 também envia mensagem.
+									</p>
+								</div>
 							</div>
-						</div>
-						<!---->
-						<div class="block">
-							<div class="title-container">
-								<div class="command-title">!contador &lt;nome&gt;</div>
-								<div class="command-mod">Moderadores</div>
+							<!---->
+							<div class="block">
+								<div class="title-container">
+									<div class="command-title">!contador &lt;nome&gt;</div>
+									<div class="command-mod">Moderadores</div>
+								</div>
+								<div class="command-details">
+									<p class="command-description">
+										Cria um contador com a mensagem "&lt;nome&gt;: %x".
+									</p>
+									<p class="command-alias">
+										Obs.: Evitar usar o mesmo nome de uma lista.
+									</p>
+								</div>
 							</div>
-							<div class="command-details">
-								<p class="command-description">
-									Cria um contador com a mensagem "&lt;nome&gt;: %x".
-								</p>
-								<p class="command-alias">
-									Obs.: Evitar usar o mesmo nome de uma lista.
-								</p>
-							</div>
-						</div>
-						<!---->
-						<div class="block">
-							<div class="title-container">
-								<div class="command-title">!contador &lt;nome&gt; &lt;mensagem&gt;</div>
-								<div class="command-mod">Moderadores</div>
-							</div>
-							<div class="command-details">
-								<p class="command-description">
-									Cria um contador com uma mensagem customizada.
-								</p>
-								<p class="command-alias">
-									Obs.: Usar "%x" onde for substituir pelo número do contador.<br/>
-									Obs.: Evitar usar o mesmo nome de uma lista.
-								</p>
+							<!---->
+							<div class="block">
+								<div class="title-container">
+									<div class="command-title">!contador &lt;nome&gt; &lt;mensagem&gt;</div>
+									<div class="command-mod">Moderadores</div>
+								</div>
+								<div class="command-details">
+									<p class="command-description">
+										Cria um contador com uma mensagem customizada.
+									</p>
+									<p class="command-alias">
+										Obs.: Usar "%x" onde for substituir pelo número do contador.<br/>
+										Obs.: Evitar usar o mesmo nome de uma lista.
+									</p>
+								</div>
 							</div>
 						</div>
 						<!---->
