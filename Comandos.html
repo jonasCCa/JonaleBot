@@ -37,6 +37,10 @@
 			font-family: "Montserrat";
 			line-height: 1.75rem!important;
 		}
+		.block.section {
+			border-color: rgb(56, 48, 92)!important;
+			background-color: rgb(56, 48, 92)!important;
+		}
 		.title-container {
 		    flex-direction:row!important;
 			display: flex;
@@ -123,6 +127,10 @@
 			flex-direction: column!important;
 			flex-grow: inherit;
 		}
+		.hidden-link {
+			text-decoration: inherit;
+			color: inherit;
+		}
 		</style>
 	</head>
 	<body style="overflow-x: hidden">
@@ -133,6 +141,12 @@
 						
 					</div>
 					<div class="flex-col"> <!--Lista Comandos-->
+						<!---->
+						<div id="Baisc_Commands" class="block section">
+							<p class="command-title">
+								Básicos
+							</p>
+						</div>
 						<!---->
 						<div class="block">
 							<p class="command-title">
@@ -172,13 +186,22 @@
 						<!---->
 						<div class="block">
 							<p class="command-title">
-								!journey
+								!jogo
 							</p>
 							<div class="command-details">
 								<p class="command-description">
-									Link da planilha do Hyrule Journey no chat.
+									Nome do jogo da Stream é enviado no chat.
+								</p>
+								<p class="command-alias">
+									Alternativas: !game
 								</p>
 							</div>
+						</div>
+						<!---->
+						<div id="Special_Commands" class="block section">
+							<p class="command-title">
+								Especiais
+							</p>
 						</div>
 						<!---->
 						<div class="block">
@@ -211,16 +234,19 @@
 						<!---->
 						<div class="block">
 							<p class="command-title">
-								!jogo
+								!journey
 							</p>
 							<div class="command-details">
 								<p class="command-description">
-									Nome do jogo da Stream é enviado no chat.
-								</p>
-								<p class="command-alias">
-									Alternativas: !game
+									Link da planilha do Hyrule Journey no chat.
 								</p>
 							</div>
+						</div>
+						<!---->
+						<div id="Media_Commands" class="block section">
+							<p class="command-title">
+								Redes
+							</p>
 						</div>
 						<!---->
 						<div class="block">
@@ -276,6 +302,12 @@
 							</div>
 						</div>
 						<!---->
+						<div id="List_Commands" class="block section">
+							<p class="command-title">
+								Listas
+							</p>
+						</div>
+						<!---->
 						<div class="block">
 							<p class="command-title">
 								!&lt;nome da lista&gt;
@@ -315,6 +347,12 @@
 									Ex.: !frases add Uma frase nova todo dia.
 								</p>
 							</div>
+						</div>
+						<!---->
+						<div id="Counter_Commands" class="block section">
+							<p class="command-title">
+								Contadores
+							</p>
 						</div>
 						<!---->
 						<div class="block">
