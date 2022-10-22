@@ -227,25 +227,28 @@
 			<div class="content"> <!--Conteúdo-->
 				<div class="flex-row-col"> <!--Linha ou Coluna (Dependendo da Janela)-->
 					<div class="flex-col-row block section-list" style="flex-grow: 1"> <!--Lista de Sessões-->
-						<a class="section-button hidden-link fB" href="#Basic_Commands">
+						<a class="section-button hidden-link fB" href="#Basicos">
 							Básicos
 						</a>
-						<a class="section-button hidden-link" href="#Special_Commands">
+						<a class="section-button hidden-link" href="#Especiais">
 							Especiais
 						</a>
-						<a class="section-button hidden-link" href="#Media_Commands">
+						<a class="section-button hidden-link" href="#First">
+							First
+						</a>
+						<a class="section-button hidden-link" href="#Redes">
 							Redes
 						</a>
-						<a class="section-button hidden-link" href="#List_Commands">
+						<a class="section-button hidden-link" href="#Listas">
 							Listas
 						</a>
-						<a class="section-button hidden-link" href="#Counter_Commands">
+						<a class="section-button hidden-link" href="#Contadores">
 							Contadores
 						</a>
 					</div>
 					<div class="flex-col scroll-switch"> <!--Lista Comandos-->
 						<!---->
-						<div id="Basic_Commands" class="block section a">
+						<div id="Basicos" class="block section a">
 							<p class="command-title">
 								Básicos
 							</p>
@@ -301,7 +304,7 @@
 							</div>
 						</div>
 						<!---->
-						<div id="Special_Commands" class="block section b">
+						<div id="Especiais" class="block section b">
 							<p class="command-title">
 								Especiais
 							</p>
@@ -346,7 +349,35 @@
 							</div>
 						</div>
 						<!---->
-						<div id="Media_Commands" class="block section a">
+						<div id="First" class="block section a">
+								<p class="command-title">
+									First
+								</p>
+								<!---->
+								<div class="block">
+									<p class="command-title">
+										!first
+									</p>
+									<div class="command-details">
+										<p class="command-description">
+											Placar de Firsts é enviado no chat.
+										</p>
+									</div>
+								</div>
+								<!---->
+								<div class="block">
+									<p class="command-title">
+										!posicao
+									</p>
+									<div class="command-details">
+										<p class="command-description">
+											Sua posição no placar de Firsts é enviada no chat.
+										</p>
+									</div>
+								</div>
+							</div>
+						<!---->
+						<div id="Redes" class="block section b">
 							<p class="command-title">
 								Redes
 							</p>
@@ -405,7 +436,7 @@
 							</div>
 							<!---->
 						</div>
-						<div id="List_Commands" class="block section b">
+						<div id="Listas" class="block section a">
 							<p class="command-title">
 								Listas
 							</p>
@@ -416,7 +447,7 @@
 								</p>
 								<div class="command-details">
 									<p class="command-description">
-										Uma entrada aleatóia da lista é enviada no chat.
+										Um item aleatório da lista é enviado no chat.
 									</p>
 								</div>
 							</div>
@@ -443,7 +474,7 @@
 								</div>
 								<div class="command-details">
 									<p class="command-description">
-										Adiciona uma nova entrada na lista.
+										Adiciona um novo item na lista.
 									</p>
 									<p class="command-alias">
 										Ex.: !frases add Uma frase nova todo dia.
@@ -452,7 +483,7 @@
 							</div>
 						</div>
 						<!---->
-						<div id="Counter_Commands" class="block section a">
+						<div id="Contadores" class="block section b">
 							<p class="command-title">
 								Contadores
 							</p>
@@ -499,6 +530,7 @@
 										Cria um contador com uma mensagem customizada.
 									</p>
 									<p class="command-alias">
+										Ex.: !contador mortes Morreram %x vezes
 										Obs.: Usar "%x" onde for substituir pelo número do contador.<br/>
 										Obs.: Evitar usar o mesmo nome de uma lista.
 									</p>
