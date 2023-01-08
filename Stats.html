@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="pt">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>JonaleBot - Stats</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="Stats.css" media="screen">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <style>
+			body {
+				background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='304' height='304'%3E%3Cpath fill='%23585858' fill-opacity='.2' d='M44.1 224a5 5 0 110 2H0v-2h44.1zm160 48a5 5 0 110 2H82v-2h122.1zm57.8-46a5 5 0 110-2H304v2h-42.1zm0 16a5 5 0 110-2H304v2h-42.1zm6.2-114a5 5 0 110 2h-86.2a5 5 0 110-2h86.2zm-256-48a5 5 0 110 2H0v-2h12.1zm185.8 34a5 5 0 110-2h86.2a5 5 0 110 2h-86.2zM258 12.1a5 5 0 11-2 0V0h2v12.1zm-64 208a5 5 0 11-2 0v-54.2a5 5 0 112 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 112 0zm16 16V64h46v2h-48V37.9a5 5 0 112 0zm-128 96V208h16v12.1a5 5 0 11-2 0V210h-16v-76.1a5 5 0 112 0zm-5.9-21.9a5 5 0 110 2H114v48H85.9a5 5 0 110-2H112v-48h12.1zm-6.2 130a5 5 0 110-2H176v-74.1a5 5 0 112 0V242h-60.1zm-16-64a5 5 0 110-2H114v48h10.1a5 5 0 110 2H112v-48h-10.1zM66 284.1a5 5 0 11-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 110 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 110-2H274v44.1a5 5 0 11-2 0V146h-10.1zm-64 96a5 5 0 110-2H208v-80h16v-14h-42.1a5 5 0 110-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 110 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 110-2H96v-42.1a5 5 0 112 0zM53.9 34a5 5 0 110-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 110-2H80V64h32V37.9a5 5 0 112 0zM101.9 82a5 5 0 110-2H128V37.9a5 5 0 112 0V82h-28.1zm16-64a5 5 0 110-2H146v44.1a5 5 0 11-2 0V18h-26.1zm102.2 270a5 5 0 110 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 112 0zM53.9 18a5 5 0 110-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 110-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 01-9.8-2h2.07a3 3 0 105.66 0H178v34h-18V21.9a5 5 0 112 0V32h14V2h-58.1zm0 96a5 5 0 110-2H137l32-32h39V21.9a5 5 0 112 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 11-2 0v-76.51L175.59 80H224V21.9a5 5 0 112 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 11-2 0v-99.51L184.59 96H300.1a5 5 0 013.9-3.9v2.07a3 3 0 000 5.66v2.07a5 5 0 01-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 11-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 110 2H0v-65.41l48-48V53.9a5 5 0 112 0zm-16 16v19.51l-34 34v-2.82l32-32V69.9a5 5 0 112 0zM12.1 32a5 5 0 110 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 110-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 110-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 110-2H64v-22.59L40.59 194H21.9a5 5 0 110-2h19.51L66 216.59V242H53.9zm150.2 14a5 5 0 110 2H96v-56.6L56.6 162H37.9a5 5 0 110-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 110-2H80v-46.59L48.59 178H21.9a5 5 0 110-2h27.51L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 013.9 3.9H3.83A3 3 0 000 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 016 97a5 5 0 01-6 4.9v-2.07a3 3 0 100-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 00-5.66 0h-2.07a5 5 0 019.8 0zM5.9 0A5.02 5.02 0 010 5.9V3.83A3 3 0 003.83 0H5.9zm294.2 0h2.07A3 3 0 00304 3.83V5.9a5 5 0 01-3.9-5.9zm3.9 300.1v2.07a3 3 0 00-1.83 1.83h-2.07a5 5 0 013.9-3.9zM97 100a3 3 0 100-6 3 3 0 000 6zm0-16a3 3 0 100-6 3 3 0 000 6zm16 16a3 3 0 100-6 3 3 0 000 6zm16 16a3 3 0 100-6 3 3 0 000 6zm0 16a3 3 0 100-6 3 3 0 000 6zm-48 32a3 3 0 100-6 3 3 0 000 6zm16 16a3 3 0 100-6 3 3 0 000 6zm32 48a3 3 0 100-6 3 3 0 000 6zm-16 16a3 3 0 100-6 3 3 0 000 6zm32-16a3 3 0 100-6 3 3 0 000 6zm0-32a3 3 0 100-6 3 3 0 000 6zm16 32a3 3 0 100-6 3 3 0 000 6zm32 16a3 3 0 100-6 3 3 0 000 6zm0-16a3 3 0 100-6 3 3 0 000 6zm-16-64a3 3 0 100-6 3 3 0 000 6zm16 0a3 3 0 100-6 3 3 0 000 6zm16 96a3 3 0 100-6 3 3 0 000 6zm0 16a3 3 0 100-6 3 3 0 000 6zm16 16a3 3 0 100-6 3 3 0 000 6zm16-144a3 3 0 100-6 3 3 0 000 6zm0 32a3 3 0 100-6 3 3 0 000 6zm16-32a3 3 0 100-6 3 3 0 000 6zm16-16a3 3 0 100-6 3 3 0 000 6zm-96 0a3 3 0 100-6 3 3 0 000 6zm0 16a3 3 0 100-6 3 3 0 000 6zm16-32a3 3 0 100-6 3 3 0 000 6zm96 0a3 3 0 100-6 3 3 0 000 6zm-16-64a3 3 0 100-6 3 3 0 000 6zm16-16a3 3 0 100-6 3 3 0 000 6zm-32 0a3 3 0 100-6 3 3 0 000 6zm0-16a3 3 0 100-6 3 3 0 000 6zm-16 0a3 3 0 100-6 3 3 0 000 6zm-16 0a3 3 0 100-6 3 3 0 000 6zm-16 0a3 3 0 100-6 3 3 0 000 6zM49 36a3 3 0 100-6 3 3 0 000 6zm-32 0a3 3 0 100-6 3 3 0 000 6zm32 16a3 3 0 100-6 3 3 0 000 6zM33 68a3 3 0 100-6 3 3 0 000 6zm16-48a3 3 0 100-6 3 3 0 000 6zm0 240a3 3 0 100-6 3 3 0 000 6zm16 32a3 3 0 100-6 3 3 0 000 6zm-16-64a3 3 0 100-6 3 3 0 000 6zm0 16a3 3 0 100-6 3 3 0 000 6zm-16-32a3 3 0 100-6 3 3 0 000 6zm80-176a3 3 0 100-6 3 3 0 000 6zm16 0a3 3 0 100-6 3 3 0 000 6zm-16-16a3 3 0 100-6 3 3 0 000 6zm32 48a3 3 0 100-6 3 3 0 000 6zm16-16a3 3 0 100-6 3 3 0 000 6zm0-32a3 3 0 100-6 3 3 0 000 6zm112 176a3 3 0 100-6 3 3 0 000 6zm-16 16a3 3 0 100-6 3 3 0 000 6zm0 16a3 3 0 100-6 3 3 0 000 6zm0 16a3 3 0 100-6 3 3 0 000 6zM17 180a3 3 0 100-6 3 3 0 000 6zm0 16a3 3 0 100-6 3 3 0 000 6zm0-32a3 3 0 100-6 3 3 0 000 6zm16 0a3 3 0 100-6 3 3 0 000 6zM17 84a3 3 0 100-6 3 3 0 000 6zm32 64a3 3 0 100-6 3 3 0 000 6zm16-16a3 3 0 100-6 3 3 0 000 6z'/%3E%3C/svg%3E");
+				background-color: rgb(161, 161, 161)!important;
+				overflow: hidden;
+			}
+    </style>
+  </head>
+  <body class="u-body u-xl-mode" data-lang="pt">
+    <section class="u-clearfix u-section-1" id="sec-f4d3">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-60 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <div class="u-align-left u-black u-container-style u-expanded-width u-group u-radius-10 u-shape-round u-group-1">
+                    <div class="u-container-layout u-container-layout-2">
+                      <img class="u-image u-image-circle u-image-1" id="image" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJkZWZhdWx0LWltYWdlLXNvbGlkIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCgl4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQwMCAyNjUiIHN0eWxlPSJ3aWR0aDogNDAwcHg7IGhlaWdodDogMjY1cHg7Ij4KPGxpbmVhckdyYWRpZW50IGlkPSJYTUxJRF8yXyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIyMDAiIHkxPSIyNzMuMTEzIiB4Mj0iMjAwIiB5Mj0iOC4xMTMiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAyNjUpIj4KCTxzdG9wICBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiNBMEM3RDMiLz4KCTxzdG9wICBvZmZzZXQ9IjAuMzE5NSIgc3R5bGU9InN0b3AtY29sb3I6I0MwRDRERSIvPgoJPHN0b3AgIG9mZnNldD0iMC43Njg4IiBzdHlsZT0ic3RvcC1jb2xvcjojRThFNUVDIi8+Cgk8c3RvcCAgb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojRjhFREY1Ii8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IGlkPSJYTUxJRF82MF8iIGZpbGw9InVybCgjWE1MSURfMl8pIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI2NSIvPgo8bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzFfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjIwMC4xIiB5MT0iOS45OTc1NTllLTAyIiB4Mj0iMjAwLjEiIHkyPSIxODYiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCAyNjUpIj4KCTxzdG9wICBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiNBMEM3RDMiLz4KCTxzdG9wICBvZmZzZXQ9IjAuMzE5NSIgc3R5bGU9InN0b3AtY29sb3I6I0MwRDRERSIvPgoJPHN0b3AgIG9mZnNldD0iMC43Njg4IiBzdHlsZT0ic3RvcC1jb2xvcjojRThFNUVDIi8+Cgk8c3RvcCAgb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojRjhFREY1Ii8+CjwvbGluZWFyR3JhZGllbnQ+CjxwYXRoIGZpbGw9InVybCgjU1ZHSURfMV8pIiBkPSJNMzk1LjMsOTYuMmMtNS0wLjgtNi4xLDEuMS04LjUsMi45Yy0xLTIuMy0yLjYtNi4yLTcuNy01YzEuNS01LjMtMi42LTguNC03LjctOC40CgljLTAuNiwwLTEuMiwwLjEtMS44LDAuMmMtMS44LTQuMS02LTYuOS0xMC43LTYuOWMtNi41LDAtMTEuOCw1LjMtMTEuOCwxMS44YzAsMC40LDAsMC45LDAuMSwxLjNjLTEuMi0wLjgtMi41LTEuMy0zLjktMS4zCgljLTQuMywwLTcuOSw0LjItNy45LDkuNGMwLDEuMiwwLjIsMi40LDAuNiwzLjVjLTAuNS0wLjEtMS0wLjEtMS42LTAuMWMtNi45LDAtMTIuNSw1LjUtMTIuNywxMi40Yy0wLjktMC4yLTEuOS0wLjQtMi45LTAuNAoJYy02LjQsMC0xMS43LDUuMi0xMi41LDExLjhjLTEuMi0wLjQtMi41LTAuNi0zLjktMC42Yy01LjksMC0xMC44LDMuOC0xMi4xLDguOWMtMi40LTItNS41LTMuMi04LjktMy4yYy02LDAtMTEuMSwzLjctMTIuOCw4LjgKCWMtMS41LTEuNC0zLjgtMi4zLTYuMy0yLjNjLTIuMSwwLTQuMSwwLjYtNS41LDEuN2gtMC4xYy0xLjMtNS41LTYuMi05LjUtMTIuMS05LjVjLTIuNCwwLTQuNywwLjctNi42LDEuOWMtMS40LTAuNy0zLTEuMi00LjgtMS4yCgljLTAuMywwLTAuNSwwLTAuOCwwYy0xLjUtNC4xLTUuMi03LTkuNS03Yy0zLjEsMC01LjksMS41LTcuOCwzLjljLTIuMi00LjgtNi44LTguMi0xMi4yLTguMmMtNS42LDAtMTAuNSwzLjctMTIuNSw4LjgKCWMtMi4xLTAuOS00LjQtMS41LTYuOS0xLjVjLTYuOCwwLTEyLjUsMy45LTE0LjUsOS4zYy0wLjIsMC0wLjUsMC0wLjcsMGMtNS4yLDAtOS42LDMuMi0xMS40LDcuOGMtMi43LTIuOC03LTQuNS0xMS44LTQuNQoJYy0zLjMsMC02LjQsMC45LTguOSwyLjNjLTIuMS02LjUtOC0xMi4yLTE4LjEtOS45Yy0yLjctMi4zLTYuMy0zLjctMTAuMS0zLjdjLTIuNSwwLTQuOCwwLjYtNi45LDEuNmMtMi4yLTUuOS03LjktMTAuMS0xNC42LTEwLjEKCWMtOC42LDAtMTUuNiw3LTE1LjYsMTUuNmMwLDAuOSwwLjEsMS43LDAuMiwyLjVjLTIuNi01LTcuOC04LjQtMTMuOC04LjRjLTguMywwLTE1LjEsNi41LTE1LjYsMTQuNmMtMi45LTMuMi03LTUuMy0xMS43LTUuMwoJYy03LjQsMC0xMy41LDUuMS0xNS4yLDEyYy0yLjktMy41LTkuOC02LTE0LjctNnYxMTkuMmg0MDBWMTAyQzQwMCwxMDIsNDAwLDk3LDM5NS4zLDk2LjJ6Ii8+CjxwYXRoIGZpbGw9IiM4RUE4QkIiIGQ9Ik00MDAsMjA2LjJjMCwwLTI1LjMtMTkuMi0zMy42LTI1LjdjLTEzLjQtMTAuNi0yMy4xLTEyLjktMzEuNy03cy0yMy45LDE5LjctMjMuOSwxOS43cy01OC45LTYzLjktNjEuNS02Ni40CgljLTEuNS0xLjQtMy42LTEuNy01LjUtMC45Yy01LjIsMi40LTE3LjYsOS43LTI0LjUsMTIuN2MtNi45LDIuOS00MS01MC43LTQ5LjYtNTNzLTg0LjMsODMuMy0xMDEuNCw3NS4xcy0yNi45LTIuMy0zNS40LDMuNQoJYy04LjYsNS45LTExLDUuOS0xNS45LDguMnMtMTcuMS01LjktMTcuMS01LjlWMjY1YzAsMCw0MDAsMC4yLDQwMCwwdi01OC44SDQwMHoiLz4KPHBhdGggZmlsbD0iIzdFOTZBNiIgZD0iTTMzMy40LDE3OWMtMTMuMS05LjMtNDAsNC42LTU1LjEsMTAuN2MtMjMuNiw5LjYtOTQtNTQuNC0xMDcuMi01OS43YzAsMC00LjIsMy43LTkuNiw3LjYKCWMtMy41LTAuNC04LjQtNS43LTkuOS00LjdjLTQuNiwzLjEtMTcuOCwxNS40LTI4LjMsMjYuNmMtMTAuNSwxMS4zLTExLjcsMC0xNS44LTAuNmMtMi41LTAuNC01NC4xLDQyLjUtNTguNyw0My4xCglDMjIuMywyMDUuMywwLDE5Ny41LDAsMTk3LjVWMjY1bDQwMC0wLjF2LTUzLjNDNDAwLDIxMS42LDM0NC44LDE4Ny4xLDMzMy40LDE3OXoiLz4KPHBhdGggZmlsbD0iIzc4OEY5RSIgZD0iTTAsMjY0Ljl2LTU4LjZjMCwwLDguMiwxLjgsMTEuMyw1LjNjMy4xLDMuNiwyNi4xLTQuMiwyNi4xLDQuN3MwLjUsNC4yLDAuNSwxNC44YzAsMTAuNywyMy00LjIsMzguMS0xOC40CglzMzQuOS00OS4yLDM2LTM1YzEsMTQuMi0xNS4xLDM5LjItMjQsNTYuNEM3OS4xLDI1MS40LDUxLjcsMjY1LDUxLjcsMjY1TDAsMjY0Ljl6Ii8+CjxwYXRoIGZpbGw9IiM3ODhGOUUiIGQ9Ik0xMDAsMjY1YzAsMCw2Ni43LTEyNS4xLDY4LjMtMTE2LjhzLTYuOCwyOS43LDIuMSwyNi4xYzguOS0zLjYsMTQuNi0xNiwxOC44LTkuNXMxNi4yLDM4LjYsMjEuOSwzMy44CgljNS43LTQuNywyMS40LTEzLjEsMjIuNC02LjVjMSw2LjUtMSw1LjMtNS43LDIwLjJDMjIzLjEsMjI3LjEsMjAwLDI2NSwyMDAsMjY1aC0xMGMwLDAsNi0yNC44LDguNi0zNC45YzIuNi0xMC4xLTMuNy0xOS0xMi04LjMKCXMtMjMsMjItMjQsMTcuOHMtNS43LTMwLjMtMTguOC0xNC4yYy0xMywxNi0zMy44LDM5LjctMzMuOCwzOS43aC0xMFYyNjV6Ii8+CjxwYXRoIGZpbGw9IiM3ODhGOUUiIGQ9Ik0yNDUsMjY1YzAsMCwxOS44LTU0LjcsMzMuNC02NC4yczUzLjctMjcuOSw0Ni45LTEzLjZjLTYuOCwxNC4yLTExLDM0LjQtMjAuMyw0OS44CgljLTkuNCwxNS40LTE4LjgsMjYuMS0xNC4xLDEzLjZjNC43LTEyLjUsNi40LTIzLjMsMy43LTIzLjFDMjcxLjMsMjI5LjEsMjYwLDI2NSwyNjAsMjY1SDI0NXoiLz4KPC9zdmc+Cg==" alt="" data-image-width="400" data-image-height="265">
+                      <h2 class="u-text u-text-1" id="nome">Usuário</h2>
+                      <div class="u-container-style u-custom-color-2 u-expanded-width u-group u-radius-10 u-shape-round u-group-2">
+                        <div class="u-container-layout u-valign-bottom u-container-layout-3">
+                          <h3 class="u-text u-text-default u-text-2">Nível:</h3>
+                          <h3 class="u-align-right u-text u-text-default u-text-3" id="nivel">1</h3>
+                        </div>
+                      </div>
+                      <div class="u-container-style u-custom-color-2 u-expanded-width u-group u-radius-10 u-shape-round u-group-3">
+                        <div class="u-container-layout u-valign-bottom u-container-layout-4">
+                          <h3 class="u-text u-text-default u-text-4">Xp:</h3>
+                          <h3 class="u-align-right u-text u-text-default u-text-5" id="xp">0/300</h3>
+                        </div>
+                      </div>
+                      <div class="u-container-style u-custom-color-2 u-expanded-width u-group u-radius-10 u-shape-round u-group-4">
+                        <div class="u-container-layout u-valign-bottom u-container-layout-5">
+                          <h3 class="u-text u-text-default u-text-6">Mensagens:</h3>
+                          <h3 class="u-align-right u-text u-text-default u-text-7" id="mensagens">0</h3>
+                        </div>
+                      </div>
+                      <div class="u-container-style u-custom-color-2 u-expanded-width u-group u-radius-10 u-shape-round u-group-5">
+                        <div class="u-container-layout u-valign-bottom u-container-layout-6">
+                          <h3 class="u-text u-text-default u-text-8">Pontos Gastos:</h3>
+                          <h3 class="u-align-right u-text u-text-default u-text-9" id="pontos">0</h3>
+                        </div>
+                      </div>
+                      <div class="u-container-style u-custom-color-2 u-expanded-width u-group u-radius-10 u-shape-round u-group-6">
+                        <div class="u-container-layout u-valign-bottom u-container-layout-7">
+                          <h3 class="u-text u-text-default u-text-10">Tempo Assistido:</h3>
+                          <h3 class="u-align-right u-text u-text-default u-text-11" id="min">0 min</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // var userID = GetURLParameter('userID');
+      function GetURLParameter(sParam) {
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++) {
+          var sParameterName = sURLVariables[i].split('=');
+          if (sParameterName[0] == sParam) {
+            return sParameterName[1];
+          }
+        }
+
+        return null;
+      }
+
+
+      var userID = GetURLParameter('userID');
+      var userStatsJson = 'https://raw.githubusercontent.com/jonasCCa/JonaleBot/main/userStats/';
+      if(userID != null)
+      {
+        userStatsJson = userStatsJson + userID + '.json';
+
+        $.getJSON(userStatsJson, function(data) {
+          var userName = `${data.userName}`
+          var level = `${data.level}`
+          var xp = `${data.currentXp}/${data.nextLevel}`
+          var messages = `${data.totalMessages}`
+          var points = `${data.totalPointsSpent}`
+          var min = `${data.totalMinutes} min`
+          var image = `${data.imageURL}`
+
+          $("#nome").html(userName);
+          $("#nivel").html(level);
+          $("#xp").html(xp);
+          $("#mensagens").html(messages);
+          $("#pontos").html(points);
+          $("#min").html(min);
+          $("#image").attr("src",image);
+        });
+      }
+    </script>
+</body></html>
