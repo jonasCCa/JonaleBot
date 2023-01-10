@@ -248,7 +248,7 @@
 					</div>
 					<div class="flex-col scroll-switch"> <!--Lista Comandos-->
 						<!---->
-						<div id="Basicos" class="block section a">
+						<div id="Basicos" class="block section a"> <!--Básicos-->
 							<p class="command-title">
 								Básicos
 							</p>
@@ -304,7 +304,7 @@
 							</div>
 						</div>
 						<!---->
-						<div id="Especiais" class="block section b">
+						<div id="Especiais" class="block section b"> <!--Especiais-->
 							<p class="command-title">
 								Especiais
 							</p>
@@ -349,7 +349,7 @@
 							</div>
 						</div>
 						<!---->
-						<div id="First" class="block section a">
+						<div id="First" class="block section a"> <!--Xp e First-->
 							<p class="command-title">
 								Xp e First
 							</p>
@@ -364,6 +364,21 @@
 									</p>
 									<p class="command-alias">
 										Alternativas: !level
+									</p>
+								</div>
+							</div>
+							<!---->
+							<div class="block">
+								<div class="title-container">
+									<div class="command-title">!ignorar &lt;usuário&gt;</div>
+									<div class="command-mod">Moderadores</div>
+								</div>
+								<div class="command-details">
+									<p class="command-description">
+										Adiciona um novo usuário à lista de ignorados (não participará do sistema de XP).
+									</p>
+									<p class="command-alias">
+										Obs.: Não utilizar @usuário, apenas o nome do usuário.
 									</p>
 								</div>
 							</div>
@@ -391,7 +406,7 @@
 							</div>
 						</div>
 						<!---->
-						<div id="Redes" class="block section b">
+						<div id="Redes" class="block section b"> <!--Redes-->
 							<p class="command-title">
 								Redes
 							</p>
@@ -450,7 +465,7 @@
 							</div>
 							<!---->
 						</div>
-						<div id="Listas" class="block section a">
+						<div id="Listas" class="block section a"> <!--Listas-->
 							<p class="command-title">
 								Listas
 							</p>
@@ -483,7 +498,7 @@
 							<!---->
 							<div class="block">
 								<div class="title-container">
-									<div class="command-title">!&lt;nome da lista&gt; add &lt;entrada&gt;</div>
+									<div class="command-title">!&lt;nome da lista&gt; add "&lt;entrada&gt;"</div>
 									<div class="command-mod">Moderadores</div>
 								</div>
 								<div class="command-details">
@@ -491,13 +506,13 @@
 										Adiciona um novo item na lista.
 									</p>
 									<p class="command-alias">
-										Ex.: !frases add Uma frase nova todo dia.
+										Ex.: !frases add "Uma frase nova todo dia."
 									</p>
 								</div>
 							</div>
 						</div>
 						<!---->
-						<div id="Contadores" class="block section b">
+						<div id="Contadores" class="block section b"> <!--Contadores-->
 							<p class="command-title">
 								Contadores
 							</p>
@@ -545,7 +560,11 @@
 									</p>
 									<p class="command-alias">
 										Ex.: !contador mortes Morreram %x vezes
-										Obs.: Usar "%x" onde for substituir pelo número do contador.<br/>
+									</p>
+									<p class="command-alias">
+										Obs.: Usar "%x" onde for substituir pelo número do contador.
+									</p>
+									<p class="command-alias">
 										Obs.: Evitar usar o mesmo nome de uma lista.
 									</p>
 								</div>
